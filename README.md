@@ -1,1 +1,1 @@
-# endeavouros-i3-setup
+# arch-linux-setup
