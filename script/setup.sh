@@ -23,16 +23,18 @@ if ! command -v yay > /dev/null; then
     yay -Syu
 fi
 
-yay -S --needed noto-fonts i3-wm openssh rofi
+yay -S --needed noto-fonts i3-wm openssh rofi pavucontrol
 
 if [ ! -d ~/.ssh ]; then
     ssh-keygen
 fi
 
 sudo cp $(dirname $0)/assets/backlight.rules /etc/udev/rules.d/backlight.rules
+sudo cp $(dirname $0)/assets/.bashrc ~/.bashrc
 sudo udevadm control --reload-rules
 sudo udevadm trigger
 sudo usermod -aG video $USER
 cp $(dirname $0)/assets/decrease-brightness.sh ~/.i3/scripts/decrease-brightness.sh
 cp $(dirname $0)/assets/increase-brightness.sh ~/.i3/scripts/increase-brightness.sh
 cp $(dirname $0)/assets/i3-config ~/.i3/config
+i3-msg reload
