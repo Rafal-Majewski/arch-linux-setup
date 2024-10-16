@@ -73,17 +73,18 @@ set $ws0 "10"
 set $errorColor "#00ff00ff"
 set $white "#ccccccff"
 set $black "#000000ff"
-set $darkgray "#333333ff"
+set $darkGray "#333333ff"
 set $gray "#aaaaaaff"
-set $lightgray "#999999ff"
+set $lightGray "#999999ff"
 set $red "#cc0000ff"
-set $darkRed "#770000ff"
+set $darkRed "#550000ff"
+set $lightRed "#ff0000ff"
 
-client.focused $white $darkgray $white $white $white
-client.focused_inactive $red $darkRed $white $errorColor $red
+client.focused $white $darkGray $white $white $white
+client.focused_inactive $red $darkRed $lightRed $red $red
 client.focused_tab_title $errorColor $errorColor $errorColor $errorColor $errorColor
-client.unfocused $lightgray $black $gray $errorColor $lightgray
-client.urgent $errorColor $errorColor $errorColor $errorColor $errorColor
+client.unfocused $lightGray $black $gray $errorColor $lightGray
+client.urgent $red $darkRed $white $red $red
 client.placeholder $errorColor $errorColor $errorColor $errorColor $errorColor
 client.background $errorColor
 
@@ -103,10 +104,10 @@ bar {
 		separator $errorColor
 		focused_statusline $errorColor
 		focused_separator $errorColor
-		focused_workspace $white $darkgray $white
+		focused_workspace $white $darkGray $white
 		active_workspace $errorColor $errorColor $errorColor
-		inactive_workspace $lightgray $black $gray
-		urgent_workspace $errorColor $errorColor $errorColor
+		inactive_workspace $lightGray $black $gray
+		urgent_workspace $red $darkRed $lightRed
 		binding_mode $errorColor $errorColor $errorColor
 	}
 }
