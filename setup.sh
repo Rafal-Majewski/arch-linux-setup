@@ -88,3 +88,6 @@ yay --sync --needed ark
 
 echo "Installing Thunar..."
 yay --sync --needed thunar
+
+echo "Installing Termite..."
+yay --sync --needed termite
