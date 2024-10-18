@@ -18,3 +18,17 @@ if [ -z "$(git config --global user.email)" ]; then
 	echo "Setting the Git user email address..."
 	git config --global user.email "$GIT_USER_EMAIL_ADDRESS"
 fi
+
+echo "Checking if Yay is installed..."
+if ! command -v yay &> /dev/null; then
+	echo "Installing the \"base-devel\" package for Yay..."
+	sudo pacman --sync --needed base-devel
+	echo "Installing Yay..."
+	CURRENT_WORKING_DIRECTORY_PATH=$(pwd)
+	cd /tmp
+	git clone https://aur.archlinux.org/yay.git
+	cd ./yay
+	makepkg -si
+	cd "$CURRENT_WORKING_DIRECTORY_PATH"
+	rm -rf /tmp/yay
+fi
