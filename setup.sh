@@ -35,3 +35,6 @@ fi
 
 echo "Updating what's currently installed using Yay..."
 yay --sync --refresh --sysupgrade
+
+echo "Installing OpenSSH..."
+yay --sync --needed openssh
