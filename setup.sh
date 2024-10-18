@@ -82,3 +82,6 @@ yay --sync --needed net-tools
 
 echo "Installing Less..."
 yay --sync --needed less
+
+echo "Installing Ark..."
+yay --sync --needed ark
