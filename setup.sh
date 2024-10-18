@@ -91,3 +91,8 @@ yay --sync --needed thunar
 
 echo "Installing Termite..."
 yay --sync --needed termite
+
+echo "Configuring Bash..."
+cp $(dirname $0)/assets/.bashrc ~/.bashrc
+cp $(dirname $0)/assets/.bash_profile ~/.bash_profile
+cp $(dirname $0)/assets/.bash_logout ~/.bash_logout
