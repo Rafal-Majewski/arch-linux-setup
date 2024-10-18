@@ -44,3 +44,6 @@ if [ ! -d ~/.ssh ]; then
 	echo "Creating a new SSH key pair..."
 	ssh-keygen -t ed25519
 fi
+
+echo "Installing i3..."
+yay --sync --needed i3-wm
