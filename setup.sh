@@ -54,5 +54,10 @@ yay --sync --needed rofi
 echo "Installing the \"xorg-xinit\" package for i3..."
 yay --sync --needed xorg-xinit
 
-echo "Installing the \"xorg-server\" package for i3..."
-yay --sync --needed xorg-server
+echo "Configuring i3..."
+mkdir -p ~/.config/i3
+cp $(dirname $0)/assets/.config/i3/config ~/.config/i3/config
+mkdir -p ~/.config/i3/scripts
+cp $(dirname $0)/assets/.config/i3/scripts/decrease-brightness.sh ~/.config/i3/scripts/decrease-brightness.sh
+cp $(dirname $0)/assets/.config/i3/scripts/increase-brightness.sh ~/.config/i3/scripts/increase-brightness.sh
+i3-msg reload

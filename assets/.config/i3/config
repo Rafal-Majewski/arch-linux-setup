@@ -1,0 +1,110 @@
+font pango: Noto Sans Regular 12
+set $mod Mod4
+workspace_layout default
+new_window pixel 1
+hide_edge_borders none
+gaps inner 0
+gaps outer 0
+floating_modifier $mod
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+w kill
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+bindsym $mod+Prior focus parent
+bindsym $mod+Next focus child
+bindsym $mod+Escape exec --no-startup-id shutdown now
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Prior move parent
+bindsym $mod+Shift+Next move child
+bindsym $mod+g split h
+bindsym $mod+v split v
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws0 "10"
+set $errorColor "#00ff00ff"
+set $black "#000000ff"
+set $darkDarkGray "#333333ff"
+set $darkLightGray "#666666ff"
+set $lightDarkGray "#999999ff"
+set $lightLightGray "#ccccccff"
+set $white "#ffffffff"
+set $darkDarkRed "#330000ff"
+set $darkLightRed "#660000ff"
+set $lightDarkRed "#990000ff"
+set $lightLightRed "#cc0000ff"
+set $red "#ff0000ff"
+client.focused $white $darkLightGray $white $white $white
+client.focused_inactive $lightLightGray $darkDarkGray $lightLightGray $lightLightGray $lightLightGray
+client.focused_tab_title $errorColor $errorColor $errorColor $errorColor $errorColor
+client.unfocused $lightDarkGray $black $lightDarkGray $lightDarkGray $lightDarkGray
+client.urgent $errorColor $errorColor $errorColor $errorColor $errorColor
+client.placeholder $errorColor $errorColor $errorColor $errorColor $errorColor
+client.background $errorColor
+bar {
+	font pango: Noto Sans Regular 12
+	position bottom
+	strip_workspace_numbers no
+	mode dock
+	tray_output none
+	workspace_buttons yes
+	workspace_min_width 0 px
+	binding_mode_indicator yes
+	colors {
+		active_workspace $lightLightGray $darkDarkGray $lightLightGray
+		background $black
+		binding_mode $errorColor $errorColor $errorColor
+		focused_separator $errorColor
+		focused_statusline $white
+		focused_workspace $white $darkLightGray $white
+		inactive_workspace $lightDarkGray $black $lightDarkGray
+		separator $errorColor
+		statusline $lightLightGray
+		urgent_workspace $red $darkLightRed $red
+	}
+}
+bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+b exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod + Ctrl + Left resize grow left 1 px
+bindsym $mod + Ctrl + Down resize grow down 1 px
+bindsym $mod + Ctrl + Up resize grow up 1 px
+bindsym $mod + Ctrl + Right resize grow right 1 px
+bindsym $mod + Shift + Ctrl + Left resize shrink left 1 px
+bindsym $mod + Shift + Ctrl + Down resize shrink down 1 px
+bindsym $mod + Shift + Ctrl + Up resize shrink up 1 px
+bindsym $mod + Shift + Ctrl + Right resize shrink right 1 px
