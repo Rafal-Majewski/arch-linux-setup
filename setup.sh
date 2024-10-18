@@ -69,3 +69,6 @@ yay --sync --needed visual-studio-code-bin
 
 echo "Setting Visual Studio Code as the text editor for Git..."
 git config --global core.editor "code --wait"
+
+echo "Installing Google Chrome..."
+yay --sync --needed google-chrome
