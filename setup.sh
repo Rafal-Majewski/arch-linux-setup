@@ -53,3 +53,6 @@ yay --sync --needed rofi
 
 echo "Installing the \"xorg-xinit\" package for i3..."
 yay --sync --needed xorg-xinit
+
+echo "Installing the \"xorg-server\" package for i3..."
+yay --sync --needed xorg-server
