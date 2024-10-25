@@ -92,6 +92,9 @@ yay --sync --needed thunar
 echo "Installing Termite..."
 yay --sync --needed termite
 
+echo "Installing the \"noto-fonts-emoji\" package..."
+yay --sync --needed noto-fonts-emoji
+
 echo "Configuring Bash..."
 cp $(dirname $0)/assets/.bashrc ~/.bashrc
 cp $(dirname $0)/assets/.bash_profile ~/.bash_profile
