@@ -97,6 +97,9 @@ yay --sync --needed noto-fonts-emoji
 echo "Installing Spectacle"
 yay --sync --needed spectacle
 
+echo "Installing keychain"
+yay --sync --needed keychain
+
 echo "Configuring Bash..."
 cp $(dirname $0)/assets/.bashrc ~/.bashrc
 cp $(dirname $0)/assets/.bash_profile ~/.bash_profile
