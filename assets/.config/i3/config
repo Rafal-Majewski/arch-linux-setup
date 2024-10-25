@@ -108,3 +108,13 @@ bindsym $mod + Shift + Ctrl + Left resize shrink left 1 px
 bindsym $mod + Shift + Ctrl + Down resize shrink down 1 px
 bindsym $mod + Shift + Ctrl + Up resize shrink up 1 px
 bindsym $mod + Shift + Ctrl + Right resize shrink right 1 px
+set $printBindingModeName "Print"
+bindsym Print mode $printBindingModeName
+
+mode $printBindingModeName {
+	bindsym r exec spectacle --region ; mode "default"
+	bindsym f exec spectacle --fullscreen ; mode "default"
+	bindsym a exec spectacle --activewindow ; mode "default"
+	bindsym m exec spectacle --current ; mode "default"
+	bindsym Escape mode "default"
+}
