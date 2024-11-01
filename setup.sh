@@ -101,3 +101,12 @@ echo "Configuring Bash..."
 cp $(dirname $0)/assets/.bashrc ~/.bashrc
 cp $(dirname $0)/assets/.bash_profile ~/.bash_profile
 cp $(dirname $0)/assets/.bash_logout ~/.bash_logout
+
+echo "Installing Deno..."
+yay --sync --needed deno
+
+echo "Copying custom i3 bar script..."
+cp $(dirname $0)/assets/custom_i3_bar.ts ~/.i3/scripts/custom_i3_bar.ts
+
+echo "Reloading i3 configuration..."
+i3-msg reload

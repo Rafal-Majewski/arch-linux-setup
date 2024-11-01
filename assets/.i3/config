@@ -98,6 +98,8 @@ bar {
 		urgent_workspace $red $darkRed $lightRed
 		binding_mode $red $darkRed $lightRed
 	}
+
+	status_command deno run ~/.i3/scripts/custom_i3_bar.ts 1000
 }
 
 bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
