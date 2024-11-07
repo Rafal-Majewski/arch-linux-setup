@@ -36,6 +36,8 @@ bindsym $mod+Right focus right
 bindsym $mod+Prior focus parent
 bindsym $mod+Next focus child
 bindsym $mod+Escape exec --no-startup-id shutdown now
+bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/scripts/increase-volume.sh
+bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/scripts/decrease-volume.sh
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
