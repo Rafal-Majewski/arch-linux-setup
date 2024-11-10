@@ -112,3 +112,6 @@ cp $(dirname $0)/assets/.config/xfce4/helpers.rc ~/.config/xfce4/helpers.rc
 
 echo "Installing Greenclip..."
 yay --sync --needed greenclip
+
+echo "Configuring Greenclip..."
+cp $(dirname $0)/assets/.config/greenclip.toml ~/.config/greenclip.toml
