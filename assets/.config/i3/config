@@ -105,6 +105,7 @@ bar {
 }
 bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+b exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
+bindsym $mod+c exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard
 bindsym $mod + Ctrl + Left resize grow left 1 px
 bindsym $mod + Ctrl + Down resize grow down 1 px
 bindsym $mod + Ctrl + Up resize grow up 1 px
