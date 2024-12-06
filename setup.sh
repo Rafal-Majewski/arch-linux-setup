@@ -115,9 +115,3 @@ yay --sync --needed greenclip
 
 echo "Configuring Greenclip..."
 cp $(dirname $0)/assets/.config/greenclip.toml ~/.config/greenclip.toml
-
-echo "Making Greenclip start automatically..."
-systemctl --user enable greenclip
-
-echo "Starting Greenclip..."
-systemctl --user start greenclip
