@@ -61,3 +61,6 @@ mkdir -p ~/.config/i3/scripts
 cp $(dirname $0)/assets/.config/i3/scripts/decrease-brightness.sh ~/.config/i3/scripts/decrease-brightness.sh
 cp $(dirname $0)/assets/.config/i3/scripts/increase-brightness.sh ~/.config/i3/scripts/increase-brightness.sh
 i3-msg reload
+
+echo "Configuring xinit..."
+cp $(dirname $0)/assets/.xinitrc ~/.xinitrc
