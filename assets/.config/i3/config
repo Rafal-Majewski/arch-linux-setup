@@ -102,6 +102,8 @@ bar {
 		statusline $lightLightGray
 		urgent_workspace $red $darkLightRed $red
 	}
+
+	status_command ~/.config/i3/bar/src/main.ts
 }
 bindsym $mod+d exec --no-startup-id rofi -modi drun -show drun -config ~/.config/rofi/rofidmenu.rasi
 bindsym $mod+b exec rofi -show window -config ~/.config/rofi/rofidmenu.rasi
