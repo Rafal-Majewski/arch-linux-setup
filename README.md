@@ -8,7 +8,6 @@ fits my needs.
 -   `Mirrors - Defined`
     -   `Mirror region - Poland`
 -   `Locales`
-    -   `Keyboard layout - pl`
     -   `Locale language - en_US.UTF-8`
 -   `Swap - False`
 -   `Profile - Minimal`
